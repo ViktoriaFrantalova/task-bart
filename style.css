@@ -116,4 +116,90 @@ html {
     .header {
       padding-top: 5%; } }
 
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 26px; }
+  .catalog-list .catalog-item:last-child:hover {
+    transform: translateY(0); }
+  @media only screen and (min-width: 1920px) {
+    .catalog-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
+      gap: 5% 3%; } }
+
+.catalog-item {
+  position: relative;
+  cursor: pointer;
+  height: 220px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+  .catalog-item:hover {
+    transform: translateY(-15px); }
+    .catalog-item:hover .catalog-count {
+      display: block;
+      font-size: 14px;
+      padding-top: 10px;
+      text-transform: lowercase; }
+  @media only screen and (min-width: 1920px) {
+    .catalog-item {
+      height: 13vw; }
+      .catalog-item:hover {
+        transform: translateY(-30px); }
+        .catalog-item:hover .catalog-count {
+          padding-top: 3%;
+          font-size: 1.1vw; } }
+
+.catalog-link {
+  text-decoration: none; }
+
+.catalog-image-wrapper {
+  position: relative;
+  height: 160px;
+  overflow: hidden; }
+  @media only screen and (min-width: 1920px) {
+    .catalog-image-wrapper {
+      height: 10vw; } }
+
+.catalog-image {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(1.2);
+  left: 0;
+  z-index: 1; }
+
+.catalog-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  background-color: white;
+  padding: 25px 10px;
+  color: black;
+  font-size: 16px; }
+  @media only screen and (min-width: 1920px) {
+    .catalog-info {
+      padding: 5% 2%;
+      font-size: 1.2vw; } }
+
+.catalog-title {
+  text-transform: uppercase; }
+
+.catalog-count {
+  display: none;
+  color: grey; }
+
+.copyright {
+  color: #b4b4b4;
+  padding: 30px 0 10px;
+  font-size: 16px; }
+  @media only screen and (min-width: 1920px) {
+    .copyright {
+      margin-top: 3vw;
+      font-size: 1vw; } }
+
 /*# sourceMappingURL=style.css.map */
