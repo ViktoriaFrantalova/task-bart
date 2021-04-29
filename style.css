@@ -83,4 +83,37 @@ html {
   filter: blur(4px);
   height: 100%; }
 
+.content {
+  padding: 0 10px;
+  max-width: 1140px;
+  margin: 0 auto; }
+  @media only screen and (min-width: 1920px) {
+    .content {
+      max-width: 80%; } }
+
+.header {
+  padding-top: 100px; }
+  .header-title {
+    font-size: 22px;
+    color: aliceblue;
+    text-transform: uppercase; }
+    @media only screen and (min-width: 1920px) {
+      .header-title {
+        font-size: 3vw; } }
+  .header-description {
+    font-size: 16px;
+    color: aliceblue;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    margin: 45px 0 30px 0;
+    border-bottom: 2px solid whitesmoke; }
+    @media only screen and (min-width: 1920px) {
+      .header-description {
+        font-size: 2vw;
+        padding-bottom: 2%;
+        margin: 3% 0 2% 0; } }
+  @media only screen and (min-width: 1920px) {
+    .header {
+      padding-top: 5%; } }
+
 /*# sourceMappingURL=style.css.map */
