@@ -8,6 +8,7 @@
   <title>Task Bart</title>
   <link rel="stylesheet" href="fonts/style.css">
   <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
 </head>
 
 <body>
@@ -75,7 +76,30 @@
           </div>
         </a>
       </li>
+      <li class="catalog-item">
+        <button class="catalog-button">
+          <i class="icon-add_circle_outline">
+            Pridať kategóriu
+          </i>
+        </button>
+      </li>
     </ul>
+    <div id="modal-overlay" class="overlay">
+      <form class="modal-form" id="modal-form">
+        <button class="modal-close-btn" id="btn-close">
+          <i class="icon-close"></i>
+          Zavrieť
+        </button>
+        <label class="modal-label" for="category">Pridať kategóriu</label>
+        <div class="modal-underline">
+          <input class="modal-input" placeholder="Zadajte názov kategórie" id="category" name="category"></input>
+          <button class="modal-button" id="btn-add">
+            <i class="icon-add"></i>
+            Pridať
+          </button>
+        </div>
+      </form>
+    </div>
     <p class="copyright">webdesign bart.sk</p>
   </section>
 </body>
