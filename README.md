@@ -25,3 +25,10 @@ Zadanie prosím nahrajte na github / gitlab / bitbucket a pošlite nám link
 ## Riešenie
 
 - ikonky som stiahla z [icomoon](https://icomoon.io/app/#/select)
+
+### sass compiler 
+
+- [sass](https://sass-lang.com/install) som skompilovala pomocou prikazu:
+```
+sass --watch ./scss/base.scss:./style.css
+```
