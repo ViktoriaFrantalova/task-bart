@@ -55,4 +55,32 @@ html {
   height: 100%;
   font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif; }
 
+.wrapper-active-catalog {
+  z-index: -2;
+  position: absolute;
+  overflow: hidden;
+  height: 335px;
+  width: 100%; }
+  .wrapper-active-catalog::after {
+    z-index: 1;
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.3);
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%; }
+  @media only screen and (min-width: 1920px) {
+    .wrapper-active-catalog {
+      height: 30%; } }
+
+.active-catalog {
+  height: inherit;
+  width: inherit;
+  background-image: url(./images/food-salad-healthy-lunch.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  height: 100%; }
+
 /*# sourceMappingURL=style.css.map */
