@@ -79,4 +79,4 @@ npm i styled-reset
 
 Nastavila som si `ThemeProvider` pre svoje globalne [premenné](./level-2/src/styles/index.tsx) a štyly, zároveň som deklarovala Typescript v priečinku [typings](./level-2/src/typings/styled-components.d.ts)
 
-V editore VSCode som si nastavila validovač [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
+V editore VSCode som si nastavila validátor [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).

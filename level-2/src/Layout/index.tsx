@@ -1,5 +1,4 @@
-import React, { FC } from 'react'
+import type { FC } from 'react'
+import { OverlayBc } from '../components/OverlayBc'
 
-export const Layout: FC = () => {
-	return <div>layout</div>
-}
+export const Layout: FC = () => <OverlayBc />
