@@ -1,13 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Layout } from './Layout'
+import { Layout } from './components/Layout'
 import reportWebVitals from './reportWebVitals'
+import { Routing } from './routes'
 import { Styler } from './styles'
 
 ReactDOM.render(
 	<React.StrictMode>
 		<Styler>
-			<Layout />
+			<Layout>
+				<Routing />
+			</Layout>
 		</Styler>
 	</React.StrictMode>,
 	document.getElementById('root'),

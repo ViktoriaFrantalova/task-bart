@@ -4,6 +4,7 @@ export const theme = {
 		white: '#FFFFFF',
 		black: '#000000',
 		black1: 'rgba(0, 0, 0, 0.3)',
+		gray: '#808080',
 		gray1: 'rgb(232, 232, 232)',
 		gray2: 'rgb(180, 180, 180)',
 		gray3: 'rgb(127, 127, 127)',
