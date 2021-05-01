@@ -4,8 +4,10 @@ import { Reset } from 'styled-reset'
 import { theme } from './theme'
 
 const GlobalStyle = createGlobalStyle`
-  html, body, body > div {
+  html, body, #root {
+    position: relative;
     font-family: ${({ theme }) => theme.fontFamily};
+    width: 100%;
     height: 100%;
     background-color: ${({ theme }) => theme.colors.white};
     color: ${({ theme }) => theme.colors.black};
