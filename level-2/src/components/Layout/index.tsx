@@ -1,6 +1,5 @@
 import type { FC } from 'react'
 import { OverlayBc } from '../OverlayBc'
-import { Header } from '../Header'
 import styled from 'styled-components'
 
 const Section = styled.section`
@@ -13,10 +12,23 @@ const Section = styled.section`
 	}
 `
 
+const Copyright = styled.p`
+	color: ${({ theme }) => theme.colors.gray2};
+	padding: 30px 0 10px;
+	font-size: 16px;
+
+	${({ theme }) => theme.breakpoints.TV5K} {
+		margin-top: 3vw;
+		font-size: 1vw;
+	}
+`
+
 export const Layout: FC = ({ children }) => (
 	<>
 		<OverlayBc />
-		<Header />
-		<Section>{children}</Section>
+		<Section>
+			{children}
+			<Copyright>webdesign bart.sk</Copyright>
+		</Section>
 	</>
 )
