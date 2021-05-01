@@ -5,10 +5,9 @@ const Wrapper = styled.header`
 	position: relative;
 	z-index: ${({ theme }) => theme.zIndex[2]};
 	padding: 100px 10px 0;
-	max-width: ${({ theme }) => theme.contentMaxWidth};
-	margin: 0 auto;
+	width: 100%;
 
-	${({ theme }) => theme.breakpoints.TV5K} {
+	% ${({ theme }) => theme.breakpoints.TV5K} {
 		max-width: 80%;
 		padding-top: 5%;
 	}

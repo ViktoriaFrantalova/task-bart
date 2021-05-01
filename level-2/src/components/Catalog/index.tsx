@@ -6,7 +6,7 @@ const Description = styled.p`
 	color: ${({ theme }) => theme.colors.gray};
 `
 
-const Item = styled.li`
+export const Item = styled.li`
 	position: relative;
 	cursor: pointer;
 	height: 220px;

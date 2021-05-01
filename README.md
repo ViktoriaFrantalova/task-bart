@@ -82,3 +82,5 @@ Nastavila som si `ThemeProvider` pre svoje globalne [premenné](./level-2/src/st
 V editore VSCode som si nastavila validátor [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
 
 Nainštalovala som si baliček [react-route-dom](https://www.npmjs.com/package/react-router-dom), ktorý mi umožňuje routoanie web aplikácie.
+
+Ikonky som stiahla z [icomoon](https://icomoon.io/app/#/select) do priecinku [Icon](./level-2/src/components/Icon)

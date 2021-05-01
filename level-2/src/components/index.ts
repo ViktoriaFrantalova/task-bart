@@ -1,3 +1,6 @@
 export * from './Layout'
 export * from './Header'
 export * from './OverlayBc'
+export * from './AddCatalog'
+export * from './Catalog'
+export * from './Icon'

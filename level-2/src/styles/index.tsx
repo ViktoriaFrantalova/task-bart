@@ -2,6 +2,8 @@ import type { FC } from 'react'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { Reset } from 'styled-reset'
 import { theme } from './theme'
+// STYLED FROM ICOMOON
+import '../components/Icon/style.css'
 
 const GlobalStyle = createGlobalStyle`
   html, body, #root {
