@@ -22,12 +22,24 @@ const Wrapper = styled.i`
 type ListIcon = typeof dataJsonIcons
 export const getListIcons = (): ListIcon => dataJsonIcons
 
-interface IconProps {
+export enum IconEnumName {
+	ARROW_BACK = 'arrow_back',
+	ARROW_FORWARD_IOS = 'arrow_forward_ios',
+	ARROW_BACK_IOS = 'arrow_back_ios',
+	ADD_A_PHOTO = 'add_a_photo',
+	ADD_CIRCLE_OUTLINE = 'add_circle_outline',
+	CONTROL_POINT = 'control_point',
+	ADD = 'add',
+	CLEAR = 'clear',
+	CLOSE = 'close',
+}
+
+export interface IconProps {
 	className?: string
-	name: 'arrow_back' | 'arrow_forward_ios' | 'arrow_back_ios' | 'add_a_photo' | 'add_circle_outline' | 'control_point' | 'add' | 'clear' | 'close'
+	name: IconEnumName
 	onClick?: () => void
 }
 
-export const Icon: FC<IconProps> = ({ name, className = '', onClick, children }) => (
+export const Icon: FC<IconProps> = ({ name, className = '', onClick }) => (
 	<Wrapper onClick={onClick} className={`icon icon-${name} ${className} rotate`} />
 )

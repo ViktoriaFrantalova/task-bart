@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Layout } from './components/Layout'
 import reportWebVitals from './reportWebVitals'
 import { Routing } from './routes'
 import { Styler } from './styles'
@@ -8,9 +7,7 @@ import { Styler } from './styles'
 ReactDOM.render(
 	<React.StrictMode>
 		<Styler>
-			<Layout>
-				<Routing />
-			</Layout>
+			<Routing />
 		</Styler>
 	</React.StrictMode>,
 	document.getElementById('root'),

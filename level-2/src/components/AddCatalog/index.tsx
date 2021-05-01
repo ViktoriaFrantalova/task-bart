@@ -1,7 +1,10 @@
-import React from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
-import { Item } from '../Catalog'
-import { Icon as IconC } from '../Icon'
+import { CatalogItem } from '../Catalog'
+import { Icon as IconC, IconEnumName } from '../Icon'
+interface AddCatalogProps {
+	iconName: IconEnumName
+}
 
 const Button = styled.button`
 	display: flex;
@@ -45,15 +48,15 @@ const Icon = styled(IconC)`
 	}
 `
 
-export const AddCatalog = () => {
+export const AddCatalog: FC<AddCatalogProps> = ({ children, iconName }) => {
 	return (
-		<Item>
+		<CatalogItem>
 			<Button>
 				<Text>
-					<Icon name="add_circle_outline" />
-					Pridať kategóriu
+					<Icon name={iconName} />
+					{children}
 				</Text>
 			</Button>
-		</Item>
+		</CatalogItem>
 	)
 }

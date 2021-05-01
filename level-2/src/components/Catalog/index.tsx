@@ -1,18 +1,20 @@
 import { FC } from 'react'
 import styled from 'styled-components'
+import { Link as LinkR } from 'react-router-dom'
 
 const Description = styled.p`
 	display: none;
 	color: ${({ theme }) => theme.colors.gray};
 `
 
-export const Item = styled.li`
+export const CatalogItem = styled.li`
 	position: relative;
 	cursor: pointer;
 	height: 220px;
 	border-radius: 8px;
 	overflow: hidden;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	transition: all 1s;
 
 	&:hover {
 		transform: translateY(-15px);
@@ -39,16 +41,10 @@ export const Item = styled.li`
 	}
 `
 
-const List = styled.ul`
+export const CatalogList = styled.ul`
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 	gap: 26px;
-
-	${Item}:last-child {
-		&:hover {
-			transform: translateY(0);
-		}
-	}
 
 	${({ theme }) => theme.breakpoints.TV5K} {
 		display: grid;
@@ -57,19 +53,16 @@ const List = styled.ul`
 	}
 `
 
-const Link = styled.a`
+const Link = styled(LinkR)<{ cursorPointer: boolean }>`
 	text-decoration: none;
+	cursor: ${({ cursorPointer }) => cursorPointer && 'pointer'};
 	height: 100%;
 	width: 100%;
 `
 
 const OverflowImg = styled.div`
-	height: 160px;
+	height: 100%;
 	overflow: hidden;
-
-	${({ theme }) => theme.breakpoints.TV5K} {
-		height: 10vw;
-	}
 `
 
 const Image = styled.img`
@@ -103,31 +96,23 @@ const Title = styled.p`
 	text-transform: uppercase;
 `
 
-interface CatalogItemProps {
+interface CatalogLinkProps {
 	img: string
-	title: string
-	count: number
+	title?: string
+	href?: string
+	count?: number
 }
 
-export const CatalogItem = ({ img, title, count }: CatalogItemProps) => (
-	<Item>
-		<Link href="#">
-			<OverflowImg>
-				<Image src={img} alt={title} />
-			</OverflowImg>
+export const CatalogLink: FC<CatalogLinkProps> = ({ img, title, count, href }) => (
+	<Link to={href || '#'} cursorPointer={!!href?.length}>
+		<OverflowImg>
+			<Image src={img} alt={title} />
+		</OverflowImg>
+		{(title || count) && (
 			<ContentImg>
-				<Title>{title}</Title>
-				<Description>{count} fotiek</Description>
+				{title && <Title>{title}</Title>}
+				{count ? <Description>{count} fotiek</Description> : null}
 			</ContentImg>
-		</Link>
-	</Item>
-)
-
-export const CatalogList: FC<{ data: CatalogItemProps[] }> = ({ data, children }) => (
-	<List>
-		{data.map((item, index) => (
-			<CatalogItem {...item} key={index} />
-		))}
-		{children}
-	</List>
+		)}
+	</Link>
 )

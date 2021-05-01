@@ -1,11 +1,16 @@
 import { FC } from 'react'
 import styled from 'styled-components'
 
+interface OverlayBcProps {
+	activeBc: string
+}
+
 const Wrapper = styled.div`
 	position: absolute;
 	overflow: hidden;
 	height: 335px;
 	width: 100%;
+	z-index: ${({ theme }) => theme.zIndex[0]};
 
 	&::after {
 		z-index: 1;
@@ -23,18 +28,18 @@ const Wrapper = styled.div`
 	}
 `
 
-const Img = styled.div`
+const Img = styled.div<OverlayBcProps>`
 	height: inherit;
 	width: inherit;
-	background-image: url(${process.env.PUBLIC_URL + '/images/food-salad-healthy-lunch.jpg'});
+	background-image: url(${({ activeBc }) => process.env.PUBLIC_URL + activeBc});
 	background-size: cover;
 	background-position: center;
 	filter: blur(4px);
 	height: 100%;
 `
 
-export const OverlayBc: FC = () => (
+export const OverlayBc: FC<OverlayBcProps> = ({ activeBc }) => (
 	<Wrapper>
-		<Img />
+		<Img activeBc={activeBc} />
 	</Wrapper>
 )

@@ -1,8 +1,7 @@
 import { FC } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Gallery } from '../pages'
-import { Header } from '../components'
-
+import { dataCategory, data } from './data'
 interface RouteProps {
 	exact?: boolean
 	link: string
@@ -12,14 +11,34 @@ interface RouteProps {
 const routes: RouteProps[] = [
 	{
 		link: '/',
-		component: Gallery,
+		exact: true,
+		component: () => <Gallery data={dataCategory} description="Kategórie" isCategory></Gallery>,
+	},
+	{
+		link: '/nature',
+		component: () => <Gallery data={[]} description="Príroda"></Gallery>,
+	},
+	{
+		link: '/architecture',
+		component: () => <Gallery data={data} description="Architektúra"></Gallery>,
+	},
+	{
+		link: '/people',
+		component: () => <Gallery data={[]} description="Ľudia"></Gallery>,
+	},
+	{
+		link: '/food',
+		component: () => <Gallery data={[]} description="Jedlo"></Gallery>,
+	},
+	{
+		link: '/car',
+		component: () => <Gallery data={[]} description="Autá"></Gallery>,
 	},
 ]
 
 export const Routing: FC = () => {
 	return (
 		<>
-			<Header />
 			<BrowserRouter>
 				<Switch>
 					{routes.map((route, i) => (
