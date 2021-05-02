@@ -102,10 +102,11 @@ interface CatalogLinkProps {
 	title?: string
 	href?: string
 	count?: number
+	onClick?: () => void
 }
 
-export const CatalogLink: FC<CatalogLinkProps> = ({ img, title, count, href }) => (
-	<Link to={href || '#'} cursorPointer={!!href?.length}>
+export const CatalogLink: FC<CatalogLinkProps> = ({ img, title, count, href, onClick }) => (
+	<Link to={href || '#'} cursorPointer={!!href?.length} onClick={onClick}>
 		<OverflowImg>
 			<Image src={img} alt={title} />
 		</OverflowImg>

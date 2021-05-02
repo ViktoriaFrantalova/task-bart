@@ -1,7 +1,8 @@
 import { FC, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { Icon, IconEnumName } from '../../Icon'
-import { Overlay, Form, ButtonCloseModal, ButtonAddCategory, IconClose, Label, IconAdd } from '../styles'
+import { CloseButton } from '../../CloseButton'
+import { Overlay, Form, ButtonAddCategory, Label, IconAdd } from '../styles'
 
 const Content = styled.div`
 	position: relative;
@@ -135,15 +136,12 @@ export const AddPhotoModal: FC<AddPhotoModalProps> = ({ setShowModal }) => {
 	return (
 		<Overlay ref={refOverlay}>
 			<Form>
-				<ButtonCloseModal
+				<CloseButton
 					onClick={e => {
 						e.preventDefault()
 						setShowModal(false)
 					}}
-				>
-					<IconClose name={IconEnumName.CLOSE} />
-					Zavrieť
-				</ButtonCloseModal>
+				/>
 				<Label>Pridať Fotky</Label>
 				<AddImageContent>
 					<UploadImageLabel>

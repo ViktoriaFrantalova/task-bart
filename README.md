@@ -84,3 +84,6 @@ V editore VSCode som si nastavila validátor [Prettier](https://marketplace.visu
 Nainštalovala som si baliček [react-route-dom](https://www.npmjs.com/package/react-router-dom), ktorý mi umožňuje routoanie web aplikácie.
 
 Ikonky som stiahla z [icomoon](https://icomoon.io/app/#/select) do priecinku [Icon](./level-2/src/components/Icon)
+
+Vramci Slider Image som pouzila balicek a prestylovala podla dizajnu [react-responsive-carousel
+](https://www.npmjs.com/package/react-responsive-carousel)

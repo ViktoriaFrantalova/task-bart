@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import reportWebVitals from './reportWebVitals'
 import { Routing } from './routes'
 import { Styler } from './styles'
+import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 
 ReactDOM.render(
 	<React.StrictMode>

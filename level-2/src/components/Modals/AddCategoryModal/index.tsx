@@ -1,7 +1,7 @@
 import { FC, useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import { IconEnumName } from '../../Icon'
-import { Overlay, Form, ButtonCloseModal, ButtonAddCategory, IconClose, Label, IconAdd } from '../styles'
+import { CloseButton, IconEnumName } from '../..'
+import { Overlay, Form, ButtonAddCategory, Label, IconAdd } from '../styles'
 
 const Underline = styled.div`
 	position: absolute;
@@ -78,15 +78,12 @@ export const AddCategoryModal: FC<AddCategoryModalProps> = ({ setShowModal }) =>
 	return (
 		<Overlay ref={refOverlay}>
 			<Form>
-				<ButtonCloseModal
+				<CloseButton
 					onClick={e => {
 						e.preventDefault()
 						setShowModal(false)
 					}}
-				>
-					<IconClose name={IconEnumName.CLOSE} />
-					Zavrieť
-				</ButtonCloseModal>
+				/>
 				<Label>Pridať kategóriu</Label>
 				<Content>
 					<Input value={inputValue} onChange={e => setInputValue(e.target.value)} placeholder="Zadajte názov kategórie" />

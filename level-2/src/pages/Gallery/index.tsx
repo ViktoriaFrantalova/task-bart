@@ -1,7 +1,17 @@
 import { FC, useState } from 'react'
-import { CatalogList, CatalogItem, Header, AddCatalog, IconEnumName, OverlayBc, CatalogLink } from '../../components'
+import {
+	AddCategoryModal,
+	AddPhotoModal,
+	CatalogList,
+	CatalogItem,
+	Header,
+	AddCatalog,
+	IconEnumName,
+	OverlayBc,
+	CatalogLink,
+	CarouselPhoto,
+} from '../../components'
 import styled from 'styled-components'
-import { AddCategoryModal, AddPhotoModal } from '../../components/Modals'
 import { useStickyState } from '../../utils'
 export interface DataProps {
 	img: string
@@ -42,6 +52,7 @@ const Copyright = styled.p`
 export const Gallery: FC<GalleryProps> = ({ data, description, isCategory }) => {
 	const [showModalCategory, setShowModalCategory] = useState(false)
 	const [showModalPhoto, setShowModalPhoto] = useState(false)
+	const [showCarouselImage, setShowCarouselImage] = useState(false)
 	const [hoveredBc, sethoveredBc] = useStickyState('/images/category/food-salad-healthy-lunch.jpg', 'hoveredImg')
 
 	return (
@@ -52,7 +63,7 @@ export const Gallery: FC<GalleryProps> = ({ data, description, isCategory }) => 
 				<CatalogList>
 					{data.map((item, index) => (
 						<CatalogItem key={index} onMouseOver={() => sethoveredBc(item.img)}>
-							<CatalogLink {...item} />
+							<CatalogLink {...item} onClick={() => !isCategory && setShowCarouselImage(true)} />
 						</CatalogItem>
 					))}
 					{isCategory ? (
@@ -67,6 +78,7 @@ export const Gallery: FC<GalleryProps> = ({ data, description, isCategory }) => 
 				</CatalogList>
 				{showModalCategory && <AddCategoryModal setShowModal={setShowModalCategory} />}
 				{showModalPhoto && <AddPhotoModal setShowModal={setShowModalPhoto} />}
+				{showCarouselImage && <CarouselPhoto data={data} setShowModal={setShowCarouselImage} />}
 				<Copyright>webdesign bart.sk</Copyright>
 			</Section>
 		</>
