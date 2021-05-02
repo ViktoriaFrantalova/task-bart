@@ -1,6 +1,7 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { CatalogList, CatalogItem, Header, AddCatalog, IconEnumName, OverlayBc, CatalogLink } from '../../components'
 import styled from 'styled-components'
+import { AddCategoryModal, AddPhotoModal } from '../../components/Modals'
 import { useStickyState } from '../../utils'
 export interface DataProps {
 	img: string
@@ -39,6 +40,8 @@ const Copyright = styled.p`
 `
 
 export const Gallery: FC<GalleryProps> = ({ data, description, isCategory }) => {
+	const [showModalCategory, setShowModalCategory] = useState(false)
+	const [showModalPhoto, setShowModalPhoto] = useState(false)
 	const [hoveredBc, sethoveredBc] = useStickyState('/images/category/food-salad-healthy-lunch.jpg', 'hoveredImg')
 
 	return (
@@ -53,11 +56,17 @@ export const Gallery: FC<GalleryProps> = ({ data, description, isCategory }) => 
 						</CatalogItem>
 					))}
 					{isCategory ? (
-						<AddCatalog iconName={IconEnumName.ADD_CIRCLE_OUTLINE}>Pridať kategóriu</AddCatalog>
+						<AddCatalog onClick={() => setShowModalCategory(true)} iconName={IconEnumName.ADD_CIRCLE_OUTLINE}>
+							Pridať kategóriu
+						</AddCatalog>
 					) : (
-						<AddCatalog iconName={IconEnumName.ADD_A_PHOTO}>Pridať fotky</AddCatalog>
+						<AddCatalog onClick={() => setShowModalPhoto(true)} iconName={IconEnumName.ADD_A_PHOTO}>
+							Pridať fotky
+						</AddCatalog>
 					)}
 				</CatalogList>
+				{showModalCategory && <AddCategoryModal setShowModal={setShowModalCategory} />}
+				{showModalPhoto && <AddPhotoModal setShowModal={setShowModalPhoto} />}
 				<Copyright>webdesign bart.sk</Copyright>
 			</Section>
 		</>

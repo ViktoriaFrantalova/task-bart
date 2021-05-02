@@ -4,6 +4,7 @@ import { CatalogItem } from '../Catalog'
 import { Icon as IconC, IconEnumName } from '../Icon'
 interface AddCatalogProps {
 	iconName: IconEnumName
+	onClick: () => void
 }
 
 const Button = styled.button`
@@ -48,10 +49,10 @@ const Icon = styled(IconC)`
 	}
 `
 
-export const AddCatalog: FC<AddCatalogProps> = ({ children, iconName }) => {
+export const AddCatalog: FC<AddCatalogProps> = ({ children, iconName, onClick }) => {
 	return (
 		<CatalogItem>
-			<Button>
+			<Button onClick={onClick}>
 				<Text>
 					<Icon name={iconName} />
 					{children}

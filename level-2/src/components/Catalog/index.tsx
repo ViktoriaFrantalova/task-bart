@@ -67,6 +67,7 @@ const OverflowImg = styled.div`
 
 const Image = styled.img`
 	width: 100%;
+	height: 100%;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%) scale(1.2);
