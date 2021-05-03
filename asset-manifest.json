@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/task-bart/static/css/main.63de550d.chunk.css",
+    "main.js": "/task-bart/static/js/main.1f3ac8ff.chunk.js",
+    "main.js.map": "/task-bart/static/js/main.1f3ac8ff.chunk.js.map",
+    "runtime-main.js": "/task-bart/static/js/runtime-main.60077c99.js",
+    "runtime-main.js.map": "/task-bart/static/js/runtime-main.60077c99.js.map",
+    "static/css/2.6b560088.chunk.css": "/task-bart/static/css/2.6b560088.chunk.css",
+    "static/js/2.1681c772.chunk.js": "/task-bart/static/js/2.1681c772.chunk.js",
+    "static/js/2.1681c772.chunk.js.map": "/task-bart/static/js/2.1681c772.chunk.js.map",
+    "static/js/3.ca0d2a22.chunk.js": "/task-bart/static/js/3.ca0d2a22.chunk.js",
+    "static/js/3.ca0d2a22.chunk.js.map": "/task-bart/static/js/3.ca0d2a22.chunk.js.map",
+    "index.html": "/task-bart/index.html",
+    "static/css/2.6b560088.chunk.css.map": "/task-bart/static/css/2.6b560088.chunk.css.map",
+    "static/css/main.63de550d.chunk.css.map": "/task-bart/static/css/main.63de550d.chunk.css.map",
+    "static/js/2.1681c772.chunk.js.LICENSE.txt": "/task-bart/static/js/2.1681c772.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/task-bart/static/media/icons.b13e3642.eot"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.60077c99.js",
+    "static/css/2.6b560088.chunk.css",
+    "static/js/2.1681c772.chunk.js",
+    "static/css/main.63de550d.chunk.css",
+    "static/js/main.1f3ac8ff.chunk.js"
+  ]
+}
