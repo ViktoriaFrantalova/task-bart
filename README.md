@@ -2,7 +2,7 @@
 
 ## Úroveň 1
 
-## Vytvor responzívnu HTML šablónu pre fotogalériu podľa grafického návrhu.
+### Vytvor responzívnu HTML šablónu pre fotogalériu podľa grafického návrhu.
 
 Potrebné podklady:
 
@@ -23,7 +23,7 @@ Odovzdanie zadania:
 
 Zadanie prosím nahrajte na github / gitlab / bitbucket a pošlite nám link
 
-## Riešenie
+### Riešenie
 
 - ikonky som stiahla z [icomoon](https://icomoon.io/app/#/select)
 
@@ -36,6 +36,8 @@ sass --watch ./scss/base.scss:./style.css
 ```
 
 ## Úroveň 2
+
+### [DEMO](https://viktoriafrantalova.github.io/task-bart/)
 
 Ak si zvládol úroveň 1 a myslíš si, že máš na viac, môžeš skúsiť aj úroveň 2. Použi podklady vytvorené v 1. úrovni na vytvorenie single page frontend aplikácie.
 
@@ -50,7 +52,7 @@ Použité technológie a požiadavky:
 - Komponenty navrhni logicky bez zbytočného opakovania sa a s možnosťou ich znovupoužitia
 - Môžeš skúsiť použiť aj webpack (voliteľné)
 
-## Riešenie
+### Riešenie
 
 Na tvorbu single page aplikácie som použila `create-react-app`, inicializovala som to pomocou príkazu:
 

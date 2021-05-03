@@ -12,6 +12,7 @@
 		"styled-reset": "^4.3.4",
 		"web-vitals": "^1.1.1"
 	},
+	"homepage": "https://viktoriafrantalova.github.io/task-bart/",
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
