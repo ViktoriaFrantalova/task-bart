@@ -87,5 +87,4 @@ Nainštalovala som si baliček [react-route-dom](https://www.npmjs.com/package/r
 
 Ikonky som stiahla z [icomoon](https://icomoon.io/app/#/select) do priecinku [Icon](./level-2/src/components/Icon)
 
-Vramci Slider Image som pouzila balicek a prestylovala podla dizajnu [react-responsive-carousel
-](https://www.npmjs.com/package/react-responsive-carousel)
+Vramci Slider Image som pouzila balicek a prestylovala podla dizajnu [react-responsive-carousel](https://www.npmjs.com/package/react-responsive-carousel)

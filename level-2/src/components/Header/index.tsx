@@ -91,7 +91,7 @@ const Line = styled.div`
 export const Header: FC<HeaderProps> = ({ title, description, isCategory }) => (
 	<Wrapper>
 		<Title>{title}</Title>
-		<Link to="/" isCategory={!isCategory}>
+		<Link to="/task-bart" isCategory={!isCategory}>
 			{!isCategory && <Icon name={IconEnumName.ARROW_BACK} />}
 			{description}
 		</Link>

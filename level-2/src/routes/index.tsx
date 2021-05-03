@@ -10,7 +10,7 @@ interface RouteProps {
 
 const routes: RouteProps[] = [
 	{
-		link: '/',
+		link: '/task-bart',
 		exact: true,
 		component: () => <Gallery data={dataCategory} description="Kategórie" isCategory></Gallery>,
 	},

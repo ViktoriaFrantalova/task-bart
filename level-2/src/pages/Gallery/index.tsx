@@ -53,7 +53,7 @@ export const Gallery: FC<GalleryProps> = ({ data, description, isCategory }) => 
 	const [showModalCategory, setShowModalCategory] = useState(false)
 	const [showModalPhoto, setShowModalPhoto] = useState(false)
 	const [showCarouselImage, setShowCarouselImage] = useState(false)
-	const [hoveredBc, sethoveredBc] = useStickyState('/images/category/food-salad-healthy-lunch.jpg', 'hoveredImg')
+	const [hoveredBc, sethoveredBc] = useStickyState('/task-bart/images/category/food-salad-healthy-lunch.jpg', 'hoveredImg')
 
 	return (
 		<>

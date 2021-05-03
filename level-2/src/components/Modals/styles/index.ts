@@ -20,7 +20,7 @@ export const Form = styled.form`
 	max-width: 960px;
 	width: 100%;
 	padding: 25px 15px;
-	background-color: white;
+	background-color: ${({ theme }) => theme.colors.white};
 	margin: 10px;
 	border-radius: 4px;
 
@@ -64,7 +64,7 @@ export const ButtonAddCategory = styled.button`
 	background-color: ${({ theme }) => theme.colors.green};
 	padding: 10px 15px 10px 45px;
 	border-radius: 4px;
-	color: white;
+	color: ${({ theme }) => theme.colors.white};
 	cursor: pointer;
 	font-weight: 600;
 	width: 100%;

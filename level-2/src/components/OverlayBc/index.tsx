@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 	z-index: ${({ theme }) => theme.zIndex[0]};
 
 	&::after {
-		z-index: 1;
+		z-index: ${({ theme }) => theme.zIndex[1]};
 		position: absolute;
 		content: '';
 		background-color: ${({ theme }) => theme.colors.black1};

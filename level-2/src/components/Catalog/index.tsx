@@ -66,12 +66,11 @@ const OverflowImg = styled.div`
 `
 
 const Image = styled.img`
-	width: 100%;
 	height: 100%;
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%) scale(1.2);
-	left: 0;
+	transform: translate(-50%, -50%) scale(1.2);
+	left: 50%;
 	z-index: ${({ theme }) => theme.zIndex[1]};
 `
 
@@ -82,7 +81,7 @@ const ContentImg = styled.div`
 	width: 100%;
 	z-index: ${({ theme }) => theme.zIndex[2]};
 	text-align: center;
-	background-color: white;
+	background-color: ${({ theme }) => theme.colors.white};
 	padding: 25px 10px;
 	color: ${({ theme }) => theme.colors.black};
 	font-size: 16px;
