@@ -31,12 +31,8 @@ const AddImageContent = styled.div`
 	margin-bottom: 20px;
 
 	${({ theme }) => theme.breakpoints.tablet} {
-		height: 2vw;
+		height: 20vw;
 		margin-bottom: 1vw;
-	}
-
-	${({ theme }) => theme.breakpoints.TV5K} {
-		height: 23vw;
 	}
 `
 

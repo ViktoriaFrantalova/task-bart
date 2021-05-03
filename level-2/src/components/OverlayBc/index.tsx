@@ -31,7 +31,7 @@ const Wrapper = styled.div`
 const Img = styled.div<OverlayBcProps>`
 	height: inherit;
 	width: inherit;
-	background-image: url(${({ activeBc }) => process.env.PUBLIC_URL + activeBc});
+	background-image: url(${({ activeBc }) => activeBc});
 	background-size: cover;
 	background-position: center;
 	filter: blur(4px);
